@@ -12,6 +12,7 @@ import {
   Palette,
 } from "lucide-react";
 import { Button } from "../ui/Button";
+import Link from "next/link";
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
@@ -96,13 +97,13 @@ export function Hero() {
                 <ArrowRight className="ml-2 inline-block h-4 w-4" />
               </Button>
 
-              <a
+              <Link
                 href="/contact"
                 className="group inline-flex items-center gap-2 px-3 py-3 text-sm text-neutral-300 transition-colors hover:text-white"
               >
                 Start a project
                 <ArrowUpRight className="h-4 w-4 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-              </a>
+              </Link>
             </motion.div>
 
             <motion.div
@@ -115,7 +116,7 @@ export function Hero() {
 
               <div className="grid grid-cols-2 gap-x-4 gap-y-4">
                 {services.map(({ label, icon: Icon }) => (
-                  <a
+                  <Link
                     key={label}
                     href="/services"
                     className="group flex items-center gap-3 text-sm text-neutral-300 transition-colors hover:text-white"
@@ -123,7 +124,7 @@ export function Hero() {
                     <Icon className="h-4 w-4 shrink-0 text-[#008CFF]" />
                     <span>{label}</span>
                     <ArrowUpRight className="ml-auto h-3.5 w-3.5 text-neutral-600 opacity-0 transition-all group-hover:translate-x-0.5 group-hover:-translate-y-0.5 group-hover:opacity-100" />
-                  </a>
+                  </Link>
                 ))}
               </div>
             </motion.div>
@@ -332,13 +333,13 @@ export function Hero() {
                 </p>
               </div>
 
-              <a
+              <Link
                 href="/work/graphic-design"
                 aria-label="Explore graphic design portfolio"
                 className="flex h-10 w-10 shrink-0 items-center justify-center border border-white/15 transition-colors hover:border-[#008CFF] hover:bg-[#008CFF] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#008CFF]"
               >
                 <ArrowDownRight className="h-4 w-4" />
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>
@@ -350,13 +351,13 @@ export function Hero() {
             <span className="px-2 text-[#008CFF]">/</span> Grow
           </p>
 
-          <a
+          <Link
             href="/work/websites"
             className="group inline-flex items-center gap-2 text-xs text-neutral-400 transition-colors hover:text-white"
           >
             Discover what we create
             <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
