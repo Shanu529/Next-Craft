@@ -1,5 +1,5 @@
 "use client";
-
+import Link from "next/link";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 import {
   ArrowDownRight,
@@ -12,7 +12,7 @@ import {
   Palette,
 } from "lucide-react";
 import { Button } from "../ui/Button";
-import Link from "next/link";
+
 
 const ease = [0.22, 1, 0.36, 1] as const;
 
